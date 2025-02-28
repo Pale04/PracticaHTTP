@@ -8,7 +8,7 @@ app.get('/info', (req,res)=>{
     const accept = req.accepts(['json','xml', 'html']);
 
     if(accept === 'json') {
-        res.json(data.mensaje);
+        res.json(data);
     } else if(accept === 'xml'){
         res.type('application/xml');
         res.send(`<mensaje>${data.mensaje}</mensaje>`);
